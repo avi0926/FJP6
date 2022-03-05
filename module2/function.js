@@ -40,3 +40,6 @@ console.log(var1(5,2));
     console.log(num1/num2);
 })(10,5);
 
+(function(num1,num2){
+    console.log(num1*num2);
+})(6,7);
