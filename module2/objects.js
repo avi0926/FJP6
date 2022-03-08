@@ -25,4 +25,14 @@ let capAmerica = {
     }
 }
 
+//whole objects
 console.log(capAmerica);
+
+
+console.log(capAmerica.Name);
+console.log(capAmerica.Age);
+console.log(capAmerica.Friends[4]);
+console.log(capAmerica.address);
+console.log(capAmerica.address.city);
+console.log(capAmerica.sayHi());
+// capAmerica.sayHi();
