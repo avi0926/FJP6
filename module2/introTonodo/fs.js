@@ -50,7 +50,7 @@ let path = require("path");
 // fs.rmdirSync("Meridirectory"); 
 
 //copy a file
-let sourcePath = path.join(__dirname,"file.txt")
+let sourcePath = path.join(__dirname,"file.txt");
 let destinationPath = path.join(__dirname,"module","file.txt");
 console.log(sourcePath);
 console.log(destinationPath);
