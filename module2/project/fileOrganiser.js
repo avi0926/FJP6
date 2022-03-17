@@ -1,21 +1,44 @@
-//take input in node.js
-// let inputArr = process.argv[2];
-// console.log(inputArr);
-
-// let inputArr = process.argv;
-// let input = inputArr[3];
-// console.log(input);
 let fs = require("fs");
-let folderpath = process.argv[2]; //C:\Users\abhin\OneDrive\Desktop\FJP6(1)\module2\project\download
-// console.log(folderpath);
+let path = require("path");
+let folderPath = process.argv[2];
 
-let folderExists = fs.existsSync(folderpath);
+// console.log(folderPath);
+let folderExists = fs.existsSync(folderPath);
+
+
+let extensions = {
+    Audio:[".mp3"],
+    Video:[".mp4",".mkv"],
+    Document:[".doc",".xlsx",".pdf",".txt"],
+    Image:[".jpeg",".jpg",".png",".gif"],
+    Software:[".exe"]
+};
+
 
 if(folderExists){
-    let files = fs.readdirSync(folderpath);
-    console.group(files);
-} else{
-    console.log("Please Enter a valid path");
+    //we will code
+    // console.log("path is valid!!!!!!");
+    let files = fs.readdirSync(folderPath);
+    for(let i=0;i<files.length;i++){
+        let ext = path.extname(files[i]);
+        let nameOfFolder = giveFolderName(ext);
+        console.log("Ext--",ext,"Folder--",nameOfFolder);
+    }
+    
+}
+else{
+    console.log("Please Enter a Valid Path!!!!!!!");
 }
 
 
+function giveFolderName(ext){
+    for(let key in extensions){
+        let extArr = extensions[key];
+        for(let i=0;i<extArr.length;i++){
+            if(extArr[i] == ext){
+                return key;
+            }
+        }
+    }
+    return 'Others'
+}
