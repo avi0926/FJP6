@@ -1,8 +1,12 @@
+//Assumption- **No folder inside the folder**
+
 let fs = require("fs");
 let path = require("path");
-let folderPath = process.argv[2];
+// let input = process.argv;
+// console.log(input);
+let folderPath = process.argv[2]; //this is to take input from user and our input starts from 2nd index
 
-// console.log(folderPath);
+console.log(folderPath);
 let folderExists = fs.existsSync(folderPath);
 
 let extensions = {
@@ -45,7 +49,7 @@ function giveFolderName(ext){
             }
         }
     }
-    return 'Others'
+    return 'Others';
 }
 
 

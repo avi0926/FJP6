@@ -35,7 +35,7 @@ console.log(var1(5,2));
     console.log("Hello from IIFE")
 })();
 
-//IIFE with parameter
+// IIFE with parameter
 (function(num1,num2){
     console.log(num1/num2);
 })(10,5);

@@ -2,7 +2,7 @@ let fs = require("fs");
 // console.log(fs)
 
 let path = require("path");
-// console.log(path);/
+// console.log(path);
 
 // let filePath = path.join(__dirname,"file.txt");
 // console.log(filePath);
@@ -40,10 +40,10 @@ let path = require("path");
 //if \ does not work then use \\ slash
 // let folderpath  = "C:\\Users\\abhin\\Downloads\\FJP6(1)\\module1";
 // let folderpath = "C:\\Users\\abhin\\Downloads\\FJP6(1)\\module2";
-// let folderpath = __dirname;
+let folderpath = __dirname;
 
-// let contentofFolder = fs.readdirSync(folderpath);
-// console.log(contentofFolder);
+let contentofFolder = fs.readdirSync(folderpath);
+console.log(contentofFolder);
 
 //delete/remove a directory
 // fs.unlinkSync("Meridirectory"); //it is only to delete a file
@@ -52,7 +52,7 @@ let path = require("path");
 //copy a file
 let sourcePath = path.join(__dirname,"file.txt");
 let destinationPath = path.join(__dirname,"module","file.txt");
-console.log(sourcePath);
-console.log(destinationPath);
+// console.log(sourcePath);
+// console.log(destinationPath);
 
 fs.copyFileSync(sourcePath,destinationPath);

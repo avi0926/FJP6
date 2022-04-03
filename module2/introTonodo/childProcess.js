@@ -12,9 +12,9 @@ let cp = require('child_process');
 //open vscode with childProcess
 // cp.execSync("code");
 
-let content = cp.execSync("node test.js");
+// let content = cp.execSync("node test.js");
 // console.log("Output of test.js file: "+ content);
-console.log(content); //code in binary
-console.log(""+ content); //code in string
+// console.log(content); //code in binary
+// console.log(""+ content); //code in string
 
 

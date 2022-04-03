@@ -23,8 +23,7 @@ elearr.push("new item");
 console.log("Array after push : "+elearr);
 elearr.push("new item again");
 console.log("Array after push : "+elearr);
-console.log(elearr);
-console.log(elearr);
+
 console.log(elearr);
 
 //2. pop
